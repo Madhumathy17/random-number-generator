@@ -5,7 +5,9 @@ export default function getColorForDigit (digitValue){
     if(matchingColorFromConfig){
         return matchingColorFromConfig.color;
     }
-    console.log("couldn't find matching color for digit :" + digitValue);
+    if(digitValue){
+        console.log("couldn't find matching color for digit :" + digitValue);
+    }
     // use fallback colour
     return "#FFFFFF";
 }
